@@ -7,6 +7,7 @@
 <link rel="icon" type="image/png" href="assets/logo/favicon.png">
 <link rel="icon" href="assets/logo/favicon.ico" sizes="any">
 <link rel="stylesheet" href="css/style.css">
+<script async defer src="https://chat.bossfight.com.br/js/widget/ab1erzwyulo4ks3n/float.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -256,12 +257,12 @@
     <!-- CONTATO -->
     <section class="section" id="contato" style="border-bottom:none;">
       <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow" data-i18n="contato.eyebrow">Contato</p>
-          <h2 data-i18n="contato.h1">Pronto para colocar seu atendimento no comando?</h2>
-        </div>
         <div class="contact-grid">
           <div class="contact-info">
+            <div class="section-head">
+              <p class="eyebrow" data-i18n="contato.eyebrow">Contato</p>
+              <h2 data-i18n="contato.h1">Pronto para colocar seu atendimento no comando?</h2>
+            </div>
             <p class="lede" data-i18n="contato.lede">Fale com nossos especialistas e descubra qual frente da Bossfight resolve o seu problema agora: tecnologia, canais ou consultoria.</p>
             <div class="contact-line">
               <span class="label" data-i18n="contato.email.label">E-mail</span>
@@ -275,6 +276,7 @@
               <span class="label" data-i18n="contato.atuacao.label">Atuação</span>
               <strong data-i18n="contato.atuacao.valor">Atendimento remoto para todo o Brasil</strong>
             </div>
+            <button type="button" id="openChatBtn" class="btn btn--primary" data-i18n="contato.chat.cta">Falar com um atendente</button>
           </div>
           <form class="contact-form" id="contactForm" novalidate>
             <div class="field">
@@ -293,7 +295,7 @@
               <label for="f-msg" data-i18n="contato.form.mensagem">Mensagem</label>
               <textarea id="f-msg" name="mensagem" rows="4" data-i18n-attr="placeholder" data-i18n="contato.form.placeholder" placeholder="Conte rapidamente o que você precisa resolver."></textarea>
             </div>
-            <button class="btn btn--primary btn--block" type="submit" data-i18n="contato.form.submit">Fale com nossos especialistas</button>
+            <button class="btn btn--primary btn--block" type="submit" data-i18n="contato.form.submit">Enviar minha solicitação</button>
             <p class="form-note" data-i18n="contato.form.nota">Protótipo de apresentação. Este formulário não envia dados. No site final, será integrado ao Chatboss.</p>
             <p class="form-success" id="formSuccess" data-i18n="contato.form.sucesso">✓ Recebemos sua mensagem. Este é um exemplo de confirmação.</p>
           </form>

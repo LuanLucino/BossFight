@@ -79,6 +79,7 @@ var I18N = {
     'contato.eyebrow': 'Contato',
     'contato.h1': 'Pronto para colocar seu atendimento no comando?',
     'contato.lede': 'Fale com nossos especialistas e descubra qual frente da Bossfight resolve o seu problema agora: tecnologia, canais ou consultoria.',
+    'contato.chat.cta': 'Falar com um atendente',
     'contato.email.label': 'E-mail',
     'contato.whats.label': 'WhatsApp',
     'contato.whats.valor': 'Atendimento via Chatboss',
@@ -89,7 +90,7 @@ var I18N = {
     'contato.form.whats': 'WhatsApp',
     'contato.form.mensagem': 'Mensagem',
     'contato.form.placeholder': 'Conte rapidamente o que você precisa resolver.',
-    'contato.form.submit': 'Fale com nossos especialistas',
+    'contato.form.submit': 'Enviar minha solicitação',
     'contato.form.nota': 'Protótipo de apresentação. Este formulário não envia dados. No site final, será integrado ao Chatboss.',
     'contato.form.sucesso': '✓ Recebemos sua mensagem. Este é um exemplo de confirmação.',
 
@@ -176,6 +177,7 @@ var I18N = {
     'contato.eyebrow': 'Contact',
     'contato.h1': 'Ready to put your customer service in command?',
     'contato.lede': 'Talk to our specialists and discover which Bossfight service solves your problem right now: technology, channels or consulting.',
+    'contato.chat.cta': 'Talk to an agent',
     'contato.email.label': 'Email',
     'contato.whats.label': 'WhatsApp',
     'contato.whats.valor': 'Service via Chatboss',
@@ -186,7 +188,7 @@ var I18N = {
     'contato.form.whats': 'WhatsApp',
     'contato.form.mensagem': 'Message',
     'contato.form.placeholder': 'Briefly tell us what you need to solve.',
-    'contato.form.submit': 'Talk to our specialists',
+    'contato.form.submit': 'Send my request',
     'contato.form.nota': 'Presentation prototype. This form doesn’t send data. In the final site, it will be integrated with Chatboss.',
     'contato.form.sucesso': '✓ We received your message. This is a sample confirmation.',
 

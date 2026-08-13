@@ -96,4 +96,19 @@
   }
   var savedLang = localStorage.getItem('bf-lang');
   if (savedLang === 'en') applyLanguage('en');
+
+  // Open the Chatboss live-chat widget from our own "Falar agora pelo chat" button
+  var openChatBtn = document.getElementById('openChatBtn');
+  if (openChatBtn) {
+    openChatBtn.addEventListener('click', function () {
+      if (window.$chatbot && typeof window.$chatbot.toggle === 'function') {
+        window.$chatbot.toggle();
+      } else {
+        // widget script (loaded async) may not be ready yet — retry shortly
+        setTimeout(function () {
+          if (window.$chatbot && typeof window.$chatbot.toggle === 'function') window.$chatbot.toggle();
+        }, 1200);
+      }
+    });
+  }
 })();

@@ -532,6 +532,14 @@ p { margin: 0; }
 :root[data-theme='light'] .partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(1); }
 :root[data-theme='dark'] .partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(0); }
 .partner-track-inner img.partner-logo-invert:hover { opacity: 1; }
+/* Chatboss support widget — recolor the floating bubble to match the site's brand blue (default is Chatboss's own green) */
+.bot-widget-bubble { background-color: #64b6e5 !important; }
+@media (prefers-color-scheme: light) {
+  .bot-widget-bubble { background-color: #1d6fa5 !important; }
+}
+:root[data-theme='light'] .bot-widget-bubble { background-color: #1d6fa5 !important; }
+:root[data-theme='dark'] .bot-widget-bubble { background-color: #64b6e5 !important; }
+
 @keyframes partner-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
