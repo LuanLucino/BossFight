@@ -139,17 +139,8 @@ a { color: inherit; }
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0 0 1rem;
-}
-.eyebrow::before {
-  content: '';
-  width: 1.4rem;
-  height: 1px;
-  background: var(--accent);
   display: inline-block;
+  margin: 0 0 1rem;
 }
 
 h1, h2, h3 {
@@ -297,6 +288,39 @@ p { margin: 0; }
   font-size: 0.85rem;
 }
 .theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-icon { display: none; }
+.theme-icon--sun { display: block; }
+@media (prefers-color-scheme: light) {
+  .theme-icon--sun { display: none; }
+  .theme-icon--moon { display: block; }
+}
+:root[data-theme='dark'] .theme-icon--sun { display: block; }
+:root[data-theme='dark'] .theme-icon--moon { display: none; }
+:root[data-theme='light'] .theme-icon--moon { display: block; }
+:root[data-theme='light'] .theme-icon--sun { display: none; }
+
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 999px;
+  height: 2rem;
+  padding: 0 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+}
+.lang-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.lang-toggle-sep { opacity: 0.4; }
+.lang-toggle-pt, .lang-toggle-en { transition: color 0.15s ease, opacity 0.15s ease; }
+:root[data-lang='en'] .lang-toggle-pt { opacity: 0.45; }
+:root[data-lang='en'] .lang-toggle-en { color: var(--accent); opacity: 1; }
+:root:not([data-lang='en']) .lang-toggle-en { opacity: 0.45; }
+:root:not([data-lang='en']) .lang-toggle-pt { color: var(--accent); opacity: 1; }
 
 @media (max-width: 860px) {
   .nav-links {
@@ -389,6 +413,7 @@ p { margin: 0; }
 }
 
 /* Hero diagram */
+.hero-visual { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
 .diagram {
   position: relative;
   background: var(--surface);
@@ -460,6 +485,61 @@ p { margin: 0; }
 .diagram-col--end .node { justify-content: flex-end; text-align: right; flex-direction: row-reverse; }
 .diagram-col--end .node-dot { background: var(--accent-2); }
 
+/* Hero partner carousel */
+.partner-carousel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.1rem 0 1.25rem;
+}
+.partner-carousel-label {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 0.85rem;
+  padding-inline: 1.25rem;
+}
+.partner-track {
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.partner-track-inner {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: partner-scroll 24s linear infinite;
+}
+.partner-carousel:hover .partner-track-inner { animation-play-state: paused; }
+.partner-track-inner img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-right: clamp(2rem, 4vw, 3rem);
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+.partner-track-inner img:hover { filter: grayscale(0); opacity: 1; }
+/* Fem Clínica logo is white-on-transparent (made for dark backgrounds); invert it in light theme so it stays visible */
+.partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(0); }
+@media (prefers-color-scheme: light) {
+  .partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(1); }
+}
+:root[data-theme='light'] .partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(1); }
+:root[data-theme='dark'] .partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(0); }
+.partner-track-inner img.partner-logo-invert:hover { opacity: 1; }
+@keyframes partner-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .partner-track-inner { animation: none; }
+}
+
 /* Chip trio (identity pillars) */
 .pillars {
   display: grid;
@@ -486,7 +566,43 @@ p { margin: 0; }
 .about-copy p + p { margin-top: 1.1rem; color: var(--text-muted); }
 .about-copy p:first-child { color: var(--text); font-size: 1.1rem; }
 
+/* Rotating word effect */
+.word-rotate {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  color: var(--accent);
+  min-width: 9.5ch;
+}
+.word-rotate-inner {
+  display: inline-block;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.word-rotate-inner.is-swapping { opacity: 0; transform: translateY(0.4em); }
+
 /* Services */
+.section-head-media {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: center;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+@media (max-width: 900px) { .section-head-media { grid-template-columns: 1fr; } }
+.section-head-media .section-head { margin-bottom: 0; }
+.omni-figure {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 0.75rem;
+}
+.omni-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bossfight — Comando total do seu atendimento</title>
+<title>Bossfight: Comando total do seu atendimento</title>
 <link rel="icon" type="image/png" href="assets/logo/favicon.png">
 <link rel="icon" href="assets/logo/favicon.ico" sizes="any">
 <link rel="stylesheet" href="css/style.css">
@@ -18,16 +18,22 @@
       <nav>
         <ul class="nav-links" id="navLinks">
         
-          <li><a href="#o-que-fazemos">Serviços</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#clientes">Clientes</a></li>
-          <li><a href="#quem-somos">Sobre</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#o-que-fazemos" data-i18n="nav.servicos">Serviços</a></li>
+          <li><a href="#produtos" data-i18n="nav.produtos">Produtos</a></li>
+          <li><a href="#clientes" data-i18n="nav.clientes">Clientes</a></li>
+          <li><a href="#quem-somos" data-i18n="nav.sobre">Sobre</a></li>
+          <li><a href="#contato" data-i18n="nav.contato">Contato</a></li>
         </ul>
       </nav>
       <div class="nav-right">
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">◐</button>
-        <a href="#contato" class="btn btn--primary btn--sm">Fale com especialistas</a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro/escuro">
+          <svg class="theme-icon theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-icon theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Alternar idioma / Switch language">
+          <span class="lang-toggle-pt">PT</span><span class="lang-toggle-sep">/</span><span class="lang-toggle-en">EN</span>
+        </button>
+        <a href="#contato" class="btn btn--primary btn--sm" data-i18n="nav.cta">Fale com especialistas</a>
         <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -40,42 +46,63 @@
     <section class="hero" id="home">
       <div class="wrap">
         <div class="hero-copy">
-          <p class="eyebrow">Tecnologia a serviço do seu atendimento</p>
-          <h1>Atendimento que nunca para. <em>Comando total</em> nas suas mãos.</h1>
-          <p class="lede">Unificamos WhatsApp, Instagram e outros canais em um único fluxo com o Chatboss — para negócios e clínicas que não podem perder tempo, contexto ou cliente.</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">Tecnologia a serviço do seu atendimento</p>
+          <h1 data-i18n="hero.h1">Atendimento que nunca para. <em>Comando total</em> nas suas mãos.</h1>
+          <p class="lede" data-i18n="hero.lede">Unificamos WhatsApp, Instagram e outros canais em um único fluxo com o Chatboss, para negócios e clínicas que não podem perder tempo, contexto ou cliente.</p>
           <div class="hero-actions">
-            <a href="#produtos" class="btn btn--primary">Descubra como transformar seu atendimento</a>
-            <a href="#contato" class="btn btn--ghost">Fale com nossos especialistas</a>
+            <a href="#produtos" class="btn btn--primary" data-i18n="hero.cta1">Descubra como transformar seu atendimento</a>
+            <a href="#contato" class="btn btn--ghost" data-i18n="hero.cta2">Fale com nossos especialistas</a>
           </div>
           <div class="hero-badges">
-            <span class="badge">Multi-canal</span>
-            <span class="badge">Resposta instantânea</span>
-            <span class="badge">Sob seu comando</span>
-            <span class="badge">Consultoria sob medida</span>
+            <span class="badge" data-i18n="hero.badge1">Multi-canal</span>
+            <span class="badge" data-i18n="hero.badge2">Resposta instantânea</span>
+            <span class="badge" data-i18n="hero.badge3">Sob seu comando</span>
+            <span class="badge" data-i18n="hero.badge4">Consultoria sob medida</span>
           </div>
         </div>
-        <div class="diagram" aria-hidden="true">
-          <svg class="diagram-svg" viewBox="0 0 300 280" preserveAspectRatio="none">
-            <path class="live" d="M70,40 C150,40 150,140 150,140" />
-            <path class="live" d="M70,95 C130,95 140,130 150,140" />
-            <path d="M70,185 C130,185 140,150 150,140" />
-            <path d="M70,240 C150,240 150,150 150,140" />
-            <path class="live" d="M150,140 C160,150 210,150 230,150" />
-            <path d="M150,140 C160,180 210,200 230,205" />
-          </svg>
-          <div class="diagram-grid">
-            <div class="diagram-col diagram-col--start">
-              <div class="node"><span class="node-dot"></span>WhatsApp</div>
-              <div class="node"><span class="node-dot"></span>Instagram</div>
-              <div class="node"><span class="node-dot"></span>Site / Web</div>
-              <div class="node"><span class="node-dot"></span>Telefone</div>
+        <div class="hero-visual">
+          <div class="diagram" aria-hidden="true">
+            <svg class="diagram-svg" viewBox="0 0 300 280" preserveAspectRatio="none">
+              <path class="live" d="M70,40 C150,40 150,140 150,140" />
+              <path class="live" d="M70,95 C130,95 140,130 150,140" />
+              <path d="M70,185 C130,185 140,150 150,140" />
+              <path d="M70,240 C150,240 150,150 150,140" />
+              <path class="live" d="M150,140 C160,150 210,150 230,150" />
+              <path d="M150,140 C160,180 210,200 230,205" />
+            </svg>
+            <div class="diagram-grid">
+              <div class="diagram-col diagram-col--start">
+                <div class="node"><span class="node-dot"></span>WhatsApp</div>
+                <div class="node"><span class="node-dot"></span>Instagram</div>
+                <div class="node"><span class="node-dot"></span><span data-i18n="hero.diagram.site">Site / Web</span></div>
+                <div class="node"><span class="node-dot"></span><span data-i18n="hero.diagram.phone">Telefone</span></div>
+              </div>
+              <div class="diagram-col diagram-col--mid">
+                <div class="node--core">Chatboss<small>Omni channel</small></div>
+              </div>
+              <div class="diagram-col diagram-col--end">
+                <div class="node"><span class="node-dot"></span><span data-i18n="hero.diagram.team">Equipe com contexto</span></div>
+                <div class="node" style="margin-top:2.5rem"><span class="node-dot"></span><span data-i18n="hero.diagram.done">Cliente atendido</span></div>
+              </div>
             </div>
-            <div class="diagram-col diagram-col--mid">
-              <div class="node--core">Chatboss<small>Omni channel</small></div>
-            </div>
-            <div class="diagram-col diagram-col--end">
-              <div class="node"><span class="node-dot"></span>Equipe com contexto</div>
-              <div class="node" style="margin-top:2.5rem"><span class="node-dot"></span>Cliente atendido</div>
+          </div>
+          <div class="partner-carousel">
+            <p class="partner-carousel-label" data-i18n="hero.partners.label">Parceiros e clientes que confiam na Bossfight</p>
+            <div class="partner-track">
+              <div class="partner-track-inner">
+                <img src="assets/partners/fem-clinica.png" alt="Fem Clínica" class="partner-logo-invert">
+                <img src="assets/partners/meta-business-partner.png" alt="Meta Business Partner">
+                <img src="assets/partners/biomed.png" alt="Biomed">
+                <img src="assets/partners/clinica-suporte.png" alt="Clínica Suport">
+                <img src="assets/partners/mega.png" alt="Mega">
+                <img src="assets/partners/rafah-medicina.png" alt="Rafah Medicina">
+                <img src="assets/partners/fem-clinica.png" alt="" aria-hidden="true" class="partner-logo-invert">
+                <img src="assets/partners/meta-business-partner.png" alt="" aria-hidden="true">
+                <img src="assets/partners/biomed.png" alt="" aria-hidden="true">
+                <img src="assets/partners/clinica-suporte.png" alt="" aria-hidden="true">
+                <img src="assets/partners/mega.png" alt="" aria-hidden="true">
+                <img src="assets/partners/rafah-medicina.png" alt="" aria-hidden="true">
+              </div>
             </div>
           </div>
         </div>
@@ -86,28 +113,28 @@
     <section class="section" id="quem-somos">
       <div class="wrap about-grid">
         <div>
-          <p class="eyebrow">Quem somos</p>
-          <h2>Evoluímos. Nosso foco mudou — a ambição, não.</h2>
+          <p class="eyebrow" data-i18n="sobre.eyebrow">Quem somos</p>
+          <h2><span data-i18n="sobre.h1">Evoluímos. Nosso foco mudou. O objetivo</span> <span class="word-rotate" data-words-pt="continua.,evolui.,avança." data-words-en="continues.,evolves.,advances."><span class="word-rotate-inner">continua.</span></span></h2>
         </div>
         <div class="about-copy">
-          <p>A Bossfight é uma agência de tecnologia focada em atendimento. Nascemos resolvendo gargalos operacionais pontuais e crescemos até desenvolver nossa própria plataforma de atendimento.</p>
-          <p>Hoje ajudamos empresas e clínicas a colocar ordem no caos operacional: menos mensagem perdida, menos sistema desconectado, menos decisão no escuro.</p>
-          <p>Não vendemos tecnologia pela tecnologia. Entregamos comando sobre o seu atendimento — com simplicidade para o cliente final e autoridade para quem está no comando do negócio.</p>
+          <p data-i18n="sobre.p1">A Bossfight é uma agência de tecnologia focada em atendimento. Nascemos resolvendo gargalos operacionais pontuais e crescemos até desenvolver nossa própria plataforma de atendimento.</p>
+          <p data-i18n="sobre.p2">Hoje ajudamos empresas e clínicas a colocar ordem no caos operacional: menos mensagem perdida, menos sistema desconectado, menos decisão no escuro.</p>
+          <p data-i18n="sobre.p3">Não vendemos tecnologia pela tecnologia. Entregamos comando sobre o seu atendimento, com simplicidade para o cliente final e autoridade para quem está no comando do negócio.</p>
         </div>
       </div>
       <div class="wrap">
         <div class="pillars">
           <div class="pillar">
-            <h3>Autoridade</h3>
-            <p>Sabemos o que fazemos e mostramos isso na prática — sem promessa vazia, sem jargão sem entrega.</p>
+            <h3 data-i18n="sobre.pilar1.titulo">Autoridade</h3>
+            <p data-i18n="sobre.pilar1.texto">Sabemos o que fazemos e mostramos isso na prática, sem promessa vazia, sem jargão sem entrega.</p>
           </div>
           <div class="pillar">
-            <h3>Simplicidade</h3>
-            <p>Tecnologia boa é a que ninguém percebe funcionando. Reduzimos etapas, não adicionamos complexidade.</p>
+            <h3 data-i18n="sobre.pilar2.titulo">Simplicidade</h3>
+            <p data-i18n="sobre.pilar2.texto">Tecnologia boa é a que ninguém percebe funcionando. Reduzimos etapas, não adicionamos complexidade.</p>
           </div>
           <div class="pillar">
-            <h3>Inovação</h3>
-            <p>Construímos produto próprio porque entendemos o problema de dentro — não apenas revendemos ferramenta.</p>
+            <h3 data-i18n="sobre.pilar3.titulo">Inovação</h3>
+            <p data-i18n="sobre.pilar3.texto">Construímos produto próprio porque entendemos o problema de dentro e não apenas revendemos ferramenta.</p>
           </div>
         </div>
       </div>
@@ -116,51 +143,56 @@
     <!-- O QUE FAZEMOS -->
     <section class="section section--alt" id="o-que-fazemos">
       <div class="wrap">
-        <div class="section-head section-head--wide">
-          <p class="eyebrow">O que fazemos</p>
-          <h2>Canais unificados, tecnologia própria e consultoria — para você no comando.</h2>
+        <div class="section-head-media">
+          <div class="section-head section-head--wide">
+            <p class="eyebrow" data-i18n="fazemos.eyebrow">O que fazemos</p>
+            <h2 data-i18n="fazemos.h1">Canais unificados, tecnologia própria e consultoria, para você no comando.</h2>
+          </div>
+          <figure class="omni-figure">
+            <img src="assets/omni-channel/omni-channel-2.jpeg" alt="Diagrama ilustrando o conceito de atendimento omni-channel: múltiplos canais (site, marketplace, redes sociais, loja) unificados em um único fluxo de atendimento">
+          </figure>
         </div>
         <div class="services">
           <div class="service-card">
             <div class="service-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H8l-4 4z"/></svg>
             </div>
-            <h3>Atendimento Contínuo</h3>
-            <p>Conversas contínuas com o Chatboss: qualificação de leads, resposta na hora e fluxos que falam a língua do seu negócio.</p>
+            <h3 data-i18n="fazemos.card1.titulo">Atendimento Contínuo</h3>
+            <p data-i18n="fazemos.card1.texto">Conversas contínuas com o Chatboss: qualificação de leads, resposta na hora e fluxos que falam a língua do seu negócio.</p>
           </div>
           <div class="service-card">
             <div class="service-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="12" r="2.4"/><circle cx="19" cy="6" r="2.4"/><circle cx="19" cy="18" r="2.4"/><path d="M7.1 11l9.8-4.3M7.1 13l9.8 4.3"/></svg>
             </div>
-            <h3>Omni Channel</h3>
-            <p>WhatsApp, Instagram e outros canais centralizados em um funil só — sua equipe atende sem perder o fio da conversa.</p>
+            <h3 data-i18n="fazemos.card2.titulo">Omni Channel</h3>
+            <p data-i18n="fazemos.card2.texto">WhatsApp, Instagram e outros canais centralizados em um funil só. Sua equipe atende sem perder o fio da conversa.</p>
           </div>
           <div class="service-card">
             <div class="service-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v4M12 16v4M4 12h4M16 12h4"/><circle cx="12" cy="12" r="3.2"/></svg>
             </div>
-            <h3>Consultoria Tecnológica</h3>
-            <p>Integração com sistemas legados, pontes entre plataformas e soluções sob medida para a operação que você já tem.</p>
+            <h3 data-i18n="fazemos.card3.titulo">Consultoria Tecnológica</h3>
+            <p data-i18n="fazemos.card3.texto">Integração com sistemas legados, pontes entre plataformas e soluções sob medida para a operação que você já tem.</p>
           </div>
         </div>
 
         <div class="flow">
           <div class="flow-step">
-            <p class="flow-step-num">01 — ENTRADA</p>
-            <h3>Canais conectados</h3>
-            <p>WhatsApp, Instagram, site e telefone chegam em um único ponto de entrada.</p>
+            <p class="flow-step-num" data-i18n="fazemos.flow1.num">01: ENTRADA</p>
+            <h3 data-i18n="fazemos.flow1.titulo">Canais conectados</h3>
+            <p data-i18n="fazemos.flow1.texto">WhatsApp, Instagram, site e telefone chegam em um único ponto de entrada.</p>
             <span class="flow-arrow">→</span>
           </div>
           <div class="flow-step">
-            <p class="flow-step-num">02 — CENTRAL</p>
-            <h3>Chatboss centraliza</h3>
-            <p>A conversa é qualificada e respondida na hora, com contexto preservado.</p>
+            <p class="flow-step-num" data-i18n="fazemos.flow2.num">02: CENTRAL</p>
+            <h3 data-i18n="fazemos.flow2.titulo">Chatboss centraliza</h3>
+            <p data-i18n="fazemos.flow2.texto">A conversa é qualificada e respondida na hora, com contexto preservado.</p>
             <span class="flow-arrow">→</span>
           </div>
           <div class="flow-step">
-            <p class="flow-step-num">03 — ATENDIMENTO</p>
-            <h3>Sua equipe assume</h3>
-            <p>Quando precisa de humano, sua equipe entra com o histórico completo em mãos.</p>
+            <p class="flow-step-num" data-i18n="fazemos.flow3.num">03: ATENDIMENTO</p>
+            <h3 data-i18n="fazemos.flow3.titulo">Sua equipe assume</h3>
+            <p data-i18n="fazemos.flow3.texto">Quando precisa de humano, sua equipe entra com o histórico completo em mãos.</p>
           </div>
         </div>
       </div>
@@ -170,27 +202,27 @@
     <section class="section" id="produtos">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Produtos</p>
-          <h2>Tecnologia própria, feita para quem está no comando.</h2>
+          <p class="eyebrow" data-i18n="produtos.eyebrow">Produtos</p>
+          <h2 data-i18n="produtos.h1">Tecnologia própria, feita para quem está no comando.</h2>
         </div>
         <div class="products">
           <div class="product-card product-card--feature">
-            <span class="product-tag">Plataforma própria</span>
+            <span class="product-tag" data-i18n="produtos.chatboss.tag">Plataforma própria</span>
             <p class="product-name">Chat<span class="accent">boss</span></p>
-            <p class="desc">Nossa plataforma própria de atendimento conversacional. Centraliza canais, agiliza respostas e dá visibilidade total do funil de atendimento.</p>
+            <p class="desc" data-i18n="produtos.chatboss.desc">Nossa plataforma própria de atendimento conversacional. Centraliza canais, agiliza respostas e dá visibilidade total do funil de atendimento.</p>
             <ul class="feature-list">
-              <li>Atendimento contínuo, 24 horas por dia</li>
-              <li>Integração Omni Channel: WhatsApp, Instagram e mais</li>
-              <li>Fluxos personalizados por tipo de negócio</li>
-              <li>Painel único para acompanhar tudo em tempo real</li>
+              <li data-i18n="produtos.chatboss.f1">Atendimento contínuo, 24 horas por dia</li>
+              <li data-i18n="produtos.chatboss.f2">Integração Omni Channel: WhatsApp, Instagram e mais</li>
+              <li data-i18n="produtos.chatboss.f3">Fluxos personalizados por tipo de negócio</li>
+              <li data-i18n="produtos.chatboss.f4">Painel único para acompanhar tudo em tempo real</li>
             </ul>
-            <a href="#contato" class="btn btn--primary">Quero modernizar meu atendimento</a>
+            <a href="#contato" class="btn btn--primary" data-i18n="produtos.chatboss.cta">Quero modernizar meu atendimento</a>
           </div>
           <div class="product-card product-card--soon">
-            <span class="product-tag product-tag--soon">Em breve</span>
-            <p class="product-name">Agenda Bossfight</p>
-            <p class="desc">Sistema de agendamento para clínicas e hospitais. Gestão simples de pacientes e atendimentos, com evolução contínua junto ao setor de saúde.</p>
-            <button class="btn btn--ghost btn--block" type="button" disabled>Em desenvolvimento</button>
+            <span class="product-tag product-tag--soon" data-i18n="produtos.agenda.tag">Em breve</span>
+            <p class="product-name" data-i18n="produtos.agenda.nome">Agenda Bossfight</p>
+            <p class="desc" data-i18n="produtos.agenda.desc">Sistema de agendamento para clínicas e hospitais. Gestão simples de pacientes e atendimentos, com evolução contínua junto ao setor de saúde.</p>
+            <button class="btn btn--ghost btn--block" type="button" disabled data-i18n="produtos.agenda.cta">Em desenvolvimento</button>
           </div>
         </div>
       </div>
@@ -200,22 +232,22 @@
     <section class="section section--alt" id="clientes">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Clientes &amp; resultados</p>
-          <h2>Quem já colocou o atendimento sob comando.</h2>
+          <p class="eyebrow" data-i18n="clientes.eyebrow">Clientes &amp; resultados</p>
+          <h2 data-i18n="clientes.h1">Quem já colocou o atendimento sob comando.</h2>
         </div>
-        <p class="testimonial-note">Depoimentos ilustrativos para este protótipo — a substituir por casos e falas reais de clientes Bossfight antes da publicação.</p>
+        <p class="testimonial-note" data-i18n="clientes.nota">Depoimentos ilustrativos para este protótipo, a substituir por casos e falas reais de clientes Bossfight antes da publicação.</p>
         <div class="testimonials">
           <div class="testimonial">
-            <blockquote>"Reduzimos o tempo de resposta e paramos de perder conversa entre canais diferentes."</blockquote>
-            <footer><span class="avatar">CL</span> Direção de clínica — cliente Bossfight</footer>
+            <blockquote data-i18n="clientes.t1.texto">"Reduzimos o tempo de resposta e paramos de perder conversa entre canais diferentes."</blockquote>
+            <footer><span class="avatar">CL</span> <span data-i18n="clientes.t1.autor">Direção de clínica, cliente Bossfight</span></footer>
           </div>
           <div class="testimonial">
-            <blockquote>"A consultoria entendeu nosso sistema legado e construiu a ponte que precisávamos, sem parar a operação."</blockquote>
-            <footer><span class="avatar">TI</span> Gestão de tecnologia — cliente Bossfight</footer>
+            <blockquote data-i18n="clientes.t2.texto">"A consultoria entendeu nosso sistema legado e construiu a ponte que precisávamos, sem parar a operação."</blockquote>
+            <footer><span class="avatar">TI</span> <span data-i18n="clientes.t2.autor">Gestão de tecnologia, cliente Bossfight</span></footer>
           </div>
           <div class="testimonial">
-            <blockquote>"O Chatboss virou o primeiro contato com o cliente. Nossa equipe só entra quando realmente precisa."</blockquote>
-            <footer><span class="avatar">OP</span> Operações — cliente Bossfight</footer>
+            <blockquote data-i18n="clientes.t3.texto">"O Chatboss virou o primeiro contato com o cliente. Nossa equipe só entra quando realmente precisa."</blockquote>
+            <footer><span class="avatar">OP</span> <span data-i18n="clientes.t3.autor">Operações, cliente Bossfight</span></footer>
           </div>
         </div>
       </div>
@@ -225,45 +257,45 @@
     <section class="section" id="contato" style="border-bottom:none;">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Contato</p>
-          <h2>Pronto para colocar seu atendimento no comando?</h2>
+          <p class="eyebrow" data-i18n="contato.eyebrow">Contato</p>
+          <h2 data-i18n="contato.h1">Pronto para colocar seu atendimento no comando?</h2>
         </div>
         <div class="contact-grid">
           <div class="contact-info">
-            <p class="lede">Fale com nossos especialistas e descubra qual frente da Bossfight resolve o seu problema agora — tecnologia, canais ou consultoria.</p>
+            <p class="lede" data-i18n="contato.lede">Fale com nossos especialistas e descubra qual frente da Bossfight resolve o seu problema agora: tecnologia, canais ou consultoria.</p>
             <div class="contact-line">
-              <span class="label">E-mail</span>
-              <a href="mailto:contato@bossfight.com.br">contato@bossfight.com.br</a>
+              <span class="label" data-i18n="contato.email.label">E-mail</span>
+              <a href="mailto:ajuda@bossfight.com.br">ajuda@bossfight.com.br</a>
             </div>
             <div class="contact-line">
-              <span class="label">WhatsApp</span>
-              <strong>Atendimento via Chatboss</strong>
+              <span class="label" data-i18n="contato.whats.label">WhatsApp</span>
+              <strong data-i18n="contato.whats.valor">Atendimento via Chatboss</strong>
             </div>
             <div class="contact-line">
-              <span class="label">Atuação</span>
-              <strong>Atendimento remoto para todo o Brasil</strong>
+              <span class="label" data-i18n="contato.atuacao.label">Atuação</span>
+              <strong data-i18n="contato.atuacao.valor">Atendimento remoto para todo o Brasil</strong>
             </div>
           </div>
           <form class="contact-form" id="contactForm" novalidate>
             <div class="field">
-              <label for="f-nome">Nome</label>
+              <label for="f-nome" data-i18n="contato.form.nome">Nome</label>
               <input id="f-nome" name="nome" type="text" autocomplete="name" required>
             </div>
             <div class="field">
-              <label for="f-empresa">Empresa ou clínica</label>
+              <label for="f-empresa" data-i18n="contato.form.empresa">Empresa ou clínica</label>
               <input id="f-empresa" name="empresa" type="text" autocomplete="organization">
             </div>
             <div class="field">
-              <label for="f-whats">WhatsApp</label>
+              <label for="f-whats" data-i18n="contato.form.whats">WhatsApp</label>
               <input id="f-whats" name="whatsapp" type="tel" autocomplete="tel" required>
             </div>
             <div class="field">
-              <label for="f-msg">Mensagem</label>
-              <textarea id="f-msg" name="mensagem" rows="4" placeholder="Conte rapidamente o que você precisa resolver."></textarea>
+              <label for="f-msg" data-i18n="contato.form.mensagem">Mensagem</label>
+              <textarea id="f-msg" name="mensagem" rows="4" data-i18n-attr="placeholder" data-i18n="contato.form.placeholder" placeholder="Conte rapidamente o que você precisa resolver."></textarea>
             </div>
-            <button class="btn btn--primary btn--block" type="submit">Fale com nossos especialistas</button>
-            <p class="form-note">Protótipo de apresentação — este formulário não envia dados. No site final, será integrado ao Chatboss.</p>
-            <p class="form-success" id="formSuccess">✓ Recebemos sua mensagem — este é um exemplo de confirmação.</p>
+            <button class="btn btn--primary btn--block" type="submit" data-i18n="contato.form.submit">Fale com nossos especialistas</button>
+            <p class="form-note" data-i18n="contato.form.nota">Protótipo de apresentação. Este formulário não envia dados. No site final, será integrado ao Chatboss.</p>
+            <p class="form-success" id="formSuccess" data-i18n="contato.form.sucesso">✓ Recebemos sua mensagem. Este é um exemplo de confirmação.</p>
           </form>
         </div>
       </div>
@@ -278,20 +310,21 @@
           <img src="assets/logo/logo-light.png" alt="Bossfight" class="logo-img logo-img--light">
         </a>
         <ul class="footer-links">
-          <li><a href="#quem-somos">Sobre</a></li>
-          <li><a href="#o-que-fazemos">Serviços</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#clientes">Clientes</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#quem-somos" data-i18n="nav.sobre">Sobre</a></li>
+          <li><a href="#o-que-fazemos" data-i18n="nav.servicos">Serviços</a></li>
+          <li><a href="#produtos" data-i18n="nav.produtos">Produtos</a></li>
+          <li><a href="#clientes" data-i18n="nav.clientes">Clientes</a></li>
+          <li><a href="#contato" data-i18n="nav.contato">Contato</a></li>
         </ul>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Bossfight — Tecnologia &amp; Atendimento</span>
-        <span class="proto-tag">Protótipo de apresentação</span>
+        <span data-i18n="footer.copy">© 2026 Bossfight: Tecnologia &amp; Atendimento</span>
+        <span class="proto-tag" data-i18n="footer.proto">Protótipo de apresentação</span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
