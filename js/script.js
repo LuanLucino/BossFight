@@ -15,11 +15,10 @@
   var themeToggle = document.getElementById('themeToggle');
   var root = document.documentElement;
   themeToggle.addEventListener('click', function () {
-    var current = root.getAttribute('data-theme');
-    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var effectiveCurrent = current || (prefersDark ? 'dark' : 'light');
-    var next = effectiveCurrent === 'dark' ? 'light' : 'dark';
+    var current = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    var next = current === 'light' ? 'dark' : 'light';
     root.setAttribute('data-theme', next);
+    localStorage.setItem('bf-theme', next);
   });
 
   var form = document.getElementById('contactForm');

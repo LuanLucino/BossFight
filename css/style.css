@@ -374,6 +374,10 @@ p { margin: 0; }
 @media (max-width: 960px) {
   .hero .wrap { grid-template-columns: 1fr; }
 }
+.hero .wrap.partners-row {
+  display: block;
+  margin-top: clamp(2rem, 5vw, 3rem);
+}
 .hero-copy { min-width: 0; }
 
 .hero h1 {
@@ -490,7 +494,7 @@ p { margin: 0; }
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 1.1rem 0 1.25rem;
+  padding: 1rem 0 2rem;
 }
 .partner-carousel-label {
   text-align: center;
@@ -499,7 +503,7 @@ p { margin: 0; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin: 0 0 0.85rem;
+  margin: 0 0 1.5rem;
   padding-inline: 1.25rem;
 }
 .partner-track {
@@ -510,28 +514,24 @@ p { margin: 0; }
   display: flex;
   align-items: center;
   width: max-content;
-  animation: partner-scroll 24s linear infinite;
+  animation: partner-scroll 48s linear infinite;
 }
 .partner-carousel:hover .partner-track-inner { animation-play-state: paused; }
 .partner-track-inner img {
-  height: 26px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   flex-shrink: 0;
   margin-right: clamp(2rem, 4vw, 3rem);
-  filter: grayscale(1);
-  opacity: 0.6;
-  transition: opacity 0.2s ease, filter 0.2s ease;
+  opacity: 1;
 }
-.partner-track-inner img:hover { filter: grayscale(0); opacity: 1; }
 /* Fem Clínica logo is white-on-transparent (made for dark backgrounds); invert it in light theme so it stays visible */
-.partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(0); }
+.partner-track-inner img.partner-logo-invert { filter: invert(0); }
 @media (prefers-color-scheme: light) {
-  .partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(1); }
+  .partner-track-inner img.partner-logo-invert { filter: invert(1); }
 }
-:root[data-theme='light'] .partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(1); }
-:root[data-theme='dark'] .partner-track-inner img.partner-logo-invert { filter: grayscale(1) invert(0); }
-.partner-track-inner img.partner-logo-invert:hover { opacity: 1; }
+:root[data-theme='light'] .partner-track-inner img.partner-logo-invert { filter: invert(1); }
+:root[data-theme='dark'] .partner-track-inner img.partner-logo-invert { filter: invert(0); }
 /* Chatboss support widget — move it from the default left side to the right */
 .bot-elements--left { left: auto !important; right: 20px !important; }
 
